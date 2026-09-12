@@ -1,0 +1,7 @@
+{
+  "name": "Jawed Habib - Hair & Beauty Salon",
+  "description": "Premium hair and beauty salon located at Ganpati Tower, Siddharthanagar. Professional hair styling, wash, color, and treatments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

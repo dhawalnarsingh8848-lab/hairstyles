@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF8F5;
+  color: #1C1A17;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D2C7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4BAAC;
+}
+
+/* Custom focus styles for accessible keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #9E7E3C;
+  outline-offset: 2px;
+}
+
+/* Form highlight pulse when service is selected from services cards */
+@keyframes highlightPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 168, 105, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(197, 168, 105, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 168, 105, 0);
+  }
+}
+
+.service-highlight-pulse {
+  animation: highlightPulse 1.8s ease-in-out;
+}
+
+/* Shimmer animation for image loading */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #F0EBE1 25%, #FAF7F2 50%, #F0EBE1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
+
